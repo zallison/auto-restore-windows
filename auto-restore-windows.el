@@ -49,6 +49,8 @@
 ;;
 ;; Code:
 
+(defvar auto-restore-windows-configuration ())
+
 (defcustom auto-restore-windows-show-messages t
   "If non-nil auto-restore-windows will display messages when
 saving, clearing, or restoring windows"
