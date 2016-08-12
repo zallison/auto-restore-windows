@@ -32,6 +32,7 @@ auto-restore-windows.el -- automatially restore window configuration when changi
 
  ;; If using use-package, something like
  (use-package auto-restore-windows
+  :load-path "/path/to/auto-restore-windows"
   :config
   ;; C-c , C
   (bind-key "C" 'auto-restore-windows-clear-window purpose-mode-prefix-map) ;; I like these bindings, YMMV
@@ -39,6 +40,7 @@ auto-restore-windows.el -- automatially restore window configuration when changi
   (bind-key "S" 'auto-restore-windows-save-window  purpose-mode-prefix-map))
 
  ;; Otherwise just require it and set your keybindings
+ (add-to-list 'load-path "/path/to/auto-restore-windows")
  (require 'auto-restore-windows)
  (define-key purpose-mode-prefix-map "C" 'auto-restore-windows-clear-window)
  (define-key purpose-mode-prefix-map "S" 'auto-restore-windows-save-window)
