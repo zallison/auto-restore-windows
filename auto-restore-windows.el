@@ -50,6 +50,7 @@
 ;; Code:
 
 (defvar auto-restore-windows-configuration ())
+(defvar auto-restore-windows-curr-buffer (buffer-name))
 
 (defcustom auto-restore-windows-show-messages t
   "If non-nil auto-restore-windows will display messages when
